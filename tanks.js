@@ -2,7 +2,10 @@ var hotKeys = [38, 40, 32]; //38 up; 40 down; 32 space bar shoot.
 
 var player = 1;
 
-var tank1Position = 0;
+var tankPosition = 0;
+var tank1Position = tankPosition;
+var tank2Position = tankPosition;
+
 var tankDistance = 50;
 
 $(document).keydown(function (e) {
@@ -21,11 +24,17 @@ $(document).keydown(function (e) {
 })
 
 var goUp = function () {
+	// check top status
+	if (tank1Position === 0) return;
+
 	tank1Position = tank1Position - tankDistance;
 	$("#tank1").css('top', tank1Position + 'px');
 }
 
 var goDown = function () {
+	// check down status
+	if (tank1Position === 450) return;
+
 	tank1Position = tank1Position + tankDistance;
 	$("#tank1").css('top', tank1Position + 'px');
 }

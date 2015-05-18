@@ -1,7 +1,32 @@
+body {
+	background-image: url("http://eoimages.gsfc.nasa.gov/images/imagerecords/80000/80435/kevir_tm5_2011288_lrg.jpg");
+	background-size: cover;
+}
+
+
 #field {
 	margin: auto;
 	margin-top: 50px;
 	height: 500px;
-	width: 500px;
+	width: 750px;
+	background-color: #FFD988;
+	position: relative;
+}
+
+
+#tank1 {
+	height: 50px;
+	width: 50px;
 	background-color: black;
+	position: absolute;
+	left: 0;
+}
+
+
+#tank2 {
+	height: 50px;
+	width: 50px;
+	background-color: red;
+	position: absolute;
+	right: 0;
 }

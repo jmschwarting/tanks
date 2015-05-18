@@ -10,26 +10,27 @@ body {
 	width: 750px;
 	background-color: white;
 	position: relative;
+	overflow: hidden;
 }
 
 
-#tank1 {
+.tank {
+	z-index: 1;
 	height: 50px;
 	width: 100px;
-	background-image: url("black.png");
 	position: absolute;
-	left: 0;
 	background-size: cover;
+}
+
+#tank1 {
+	background-image: url("black.png");
+	left: 0;
 }
 
 
 #tank2 {
-	height: 50px;
-	width: 100px;
 	background-image: url("green.png");
-	position: absolute;
 	right: 0;
-	background-size: cover;
 }
 
 
@@ -39,4 +40,5 @@ body {
 	background-image: url("shell1.png");
 	position: absolute;
 	background-size: cover;
+	right: 750px;
 }

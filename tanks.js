@@ -38,8 +38,3 @@ var goDown = function () {
 	tank1Position = tank1Position + tankDistance;
 	$("#tank1").css('top', tank1Position + 'px');
 }
-
-
-function shoot () {
-	$("#field").append('<div class="shell"></div>');
-};

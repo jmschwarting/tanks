@@ -3,7 +3,7 @@ var hotKeys = [38, 40, 32]; //38 up; 40 down; 32 space bar shoot.
 var player = 1;
 
 var tank1Position = 0;
-var tankDistance = 40;
+var tankDistance = 50;
 
 $(document).keydown(function (e) {
 	var key = e.which;
@@ -14,7 +14,7 @@ $(document).keydown(function (e) {
 			goUp();
 		} else if (key === 40) {
 			goDown();
-		} else {
+		} else if (key === 32) {
 			shoot();
 		}
 	}
@@ -29,3 +29,8 @@ var goDown = function () {
 	tank1Position = tank1Position + tankDistance;
 	$("#tank1").css('top', tank1Position + 'px');
 }
+
+
+function shoot () {
+	$("#field").append('<div class="shell"></div>');
+};

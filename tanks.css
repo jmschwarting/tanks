@@ -30,5 +30,13 @@ body {
 	position: absolute;
 	right: 0;
 	background-size: cover;
+}
 
+
+.shell {
+	height: 50px;
+	width: 30px;
+	background-image: url("shell1.png");
+	position: absolute;
+	background-size: cover;
 }

@@ -57,6 +57,12 @@ body {
 	display: none;
 }
 
+
+#gameOverLose {
+	display: none;
+}
+
+
 h1 {
 	text-align: center;
 	font-size: 60px;

@@ -13,11 +13,11 @@ var tankDistance = 50;
 var isGameOver = false;
 
 $(document).keydown(function (e) {
-	if (isGameOver) return;
-
 	var key = e.which;
+
 	if ($.inArray(key, hotKeys) < 0) { return; } else {
 		e.preventDefault();
+		if (isGameOver) return;
 		if (key === 38) {
 			goUp();
 		} else if (key === 40) {

@@ -18,21 +18,34 @@
 
 </head>
 <body>
-<div id="field">
-	<div class="tank" id="tank1"></div>
-	<div class="tank" id="tank2"></div>
-	<div id="gameOver">
-		<h1>YOU WIN</h1>
+
+<div class="wrapper">
+	<div class="box-wrapper">
+		<div class="info-box">
+			<h4><b>Best Player:</b> <span id="high-player">Obama<span></h4>
+			<h4>Highest Score: <span id="high-score">0<span></h4>
+			<h4>Current Score: <span id="current-score">0</span></h4>
+		</div>
+
+		<div class="info-box" style="margin-top: 20px;">
+			<h4>"Enter" play</h4>
+			<h4>"Space" shoot</h4>
+			<h4>"Up" move up</h4>
+			<h4>"Down" move down</h4>
+		</div>
 	</div>
-	<div id="gameOverLose">
-		<h1>YOU LOSE</h1>
+
+	<div id="field">
+		<div class="tank" id="tank1"></div>
+		<div class="tank" id="tank2"></div>
+		<div id="gameOver">
+			<h1>YOU WIN</h1>
+		</div>
+		<div id="gameOverLose">
+			<h1>YOU LOSE</h1>
+		</div>
 	</div>
 </div>
-
-<h2 id="high-player">Best Player: None</h2>
-<h2 id="high-score">High Score: 0</h2>
-<h2 id="current-score">Current Score: 0</h2>
-
 
 	<script type="text/javascript" src="tanks.js"></script>
 	<script type="text/javascript" src="tank2.js"></script>

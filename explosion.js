@@ -74,7 +74,7 @@ function stopPlaying2 () {
 
 function updateScore (score) {
 	playerOneScore = score;
-	$('#current-score').html('Current Score: ' + score)
+	$('#current-score').html(score)
 
 	if (score > highestScore) {
 

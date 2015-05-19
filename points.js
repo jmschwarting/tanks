@@ -4,8 +4,8 @@ var getHighScore = function () {
 	firebase.on('value', function (data) {
 		allData = data.val()
 		highestScore = allData.score;
-		$('#high-score').html('Hight Score: ' + highestScore);
-		$('#high-player').html('Best Player: ' + allData.player);
+		$('#high-score').html(highestScore);
+		$('#high-player').html(allData.player);
 	})
 }
 

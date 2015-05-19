@@ -1,14 +1,17 @@
 body {
-	background-color: #FFD988;
+	/*background-color: #FFD988;*/
+	background: url("grass.png");
 }
 
 
 #field {
+	border-radius: 2px;
 	margin: auto;
-	margin-top: 50px;
+	margin-top: 15vh;
 	height: 500px;
 	width: 750px;
-	background-color: white;
+	/*background-color: white;*/
+	background: url("dirt.png");
 	position: relative;
 	overflow: hidden;
 }
@@ -29,13 +32,13 @@ body {
 
 #tank1 {
 	background-image: url("black.png");
-	left: 0;
+	left: 5px;
 }
 
 
 #tank2 {
 	background-image: url("green.png");
-	right: 0;
+	right: 5px;
 }
 
 

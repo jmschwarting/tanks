@@ -1,7 +1,15 @@
+var explosionAudio = new Audio('explosion.wav');
+
 var collisionCheck;
 function detectGameOver (shellPosition) {
 	collisionCheck = setTimeout(function() {
 		if (tank2Position ==  shellPosition) {
+			
+			//explosion sound
+			explosionAudio.pause();
+			explosionAudio.currentTime = 0;
+			explosionAudio.play();
+
 			clearTimeout(collisionCheck);
 			clearTimeout(collisionCheck2);
 			clearInterval(autoShooting);
@@ -15,6 +23,12 @@ var collisionCheck2;
 function detectGameOver2 (shellPosition) {
 	collisionCheck2 = setTimeout(function() {
 		if (tank1Position ==  shellPosition) {
+
+			//explosion sound
+			explosionAudio.pause();
+			explosionAudio.currentTime = 0;
+			explosionAudio.play();
+
 			clearTimeout(collisionCheck2);
 			clearTimeout(collisionCheck);
 			clearInterval(autoShooting);
@@ -55,7 +69,7 @@ function stopPlaying2 () {
 	clearTimeout(tankMovement);
 	
 	$(".shell").remove();
-	$(".shell2").remove();	
+	$(".shell2").remove();
 };
 
 function updateScore (score) {
@@ -65,11 +79,13 @@ function updateScore (score) {
 	if (score > highestScore) {
 
 		setTimeout(function () {
-			var userName = prompt("You broke the record! What's your name?");
-			
+			if (!userName) {
+				userName = prompt("You broke the record! What's your name?");
+			}
+
 			// check if they added a user name
 			if (!userName) {
-				userName = "Anonymous"
+				userName = "Obomba"
 			}
 			updateHighScore(userName, score);
 		}, 800)

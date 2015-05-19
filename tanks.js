@@ -15,6 +15,7 @@ var playerOneScore = 0;
 var playerTwoScore = 0;
 
 var highestScore = 0;
+var userName;
 
 $(document).keydown(function (e) {
 	var key = e.which;

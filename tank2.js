@@ -2,6 +2,8 @@ var tank2Position = 0;
 var nextMove = 0;
 var triggerRobotMove = '';
 
+var tankMovement;
+
 function move2 () {
 	//create 0 or 1 randomly
 	nextMove = Math.round(Math.random());
@@ -17,7 +19,7 @@ function move2 () {
 	}
 	
 	//repeat function
-	setTimeout(function(){
+	tankMovement = setTimeout(function(){
 		move2();
 	}, 700);
 }

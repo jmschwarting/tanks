@@ -1,7 +1,9 @@
+var collisionCheck;
 function detectGameOver (shellPosition) {
-	var collisionCheck = setTimeout(function() {
+	collisionCheck = setTimeout(function() {
 		if (tank2Position ==  shellPosition) {
 			clearTimeout(collisionCheck);
+			clearTimeout(collisionCheck2);
 			clearInterval(autoShooting);
 			stopPlaying();
 		}
@@ -9,10 +11,11 @@ function detectGameOver (shellPosition) {
 }
 
 
-
+var collisionCheck2;
 function detectGameOver2 (shellPosition) {
-	var collisionCheck = setTimeout(function() {
+	collisionCheck2 = setTimeout(function() {
 		if (tank1Position ==  shellPosition) {
+			clearTimeout(collisionCheck2);
 			clearTimeout(collisionCheck);
 			clearInterval(autoShooting);
 			stopPlaying2();
@@ -31,6 +34,7 @@ function stopPlaying () {
 	clearTimeout(tankMovement);
 	
 	$(".shell").remove();
+	$(".shell2").remove();
 };
 
 
@@ -43,5 +47,6 @@ function stopPlaying2 () {
 
 	clearTimeout(tankMovement);
 	
-	$(".shell").remove();	
+	$(".shell").remove();
+	$(".shell2").remove();	
 };

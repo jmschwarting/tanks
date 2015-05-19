@@ -52,6 +52,16 @@ body {
 	right: 650px;
 }
 
+.shell2 {
+	height: 50px;
+	width: 30px;
+	background-image: url("shell2.png");
+	position: absolute;
+	background-size: cover;
+	right: 650px;
+}
+
+
 
 #gameOver {
 	display: none;

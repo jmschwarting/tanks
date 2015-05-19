@@ -6,6 +6,8 @@ var tankPosition = 0;
 var tank1Position = tankPosition;
 var tank2Position = tankPosition;
 
+var shellSpeed = 700;
+
 var tankDistance = 50;
 
 $(document).keydown(function (e) {

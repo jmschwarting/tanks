@@ -17,11 +17,13 @@ function move2 () {
 			move2Down();
 		} else { move2Up(); }
 	}
+
+	var nextMoveSpeed = Math.round(Math.random()) * 100 + 100;
 	
 	//repeat function
 	tankMovement = setTimeout(function(){
 		move2();
-	}, 700);
+	}, nextMoveSpeed);
 }
 
 move2();

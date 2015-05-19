@@ -5,7 +5,7 @@ function detectGameOver (shellPosition) {
 			clearTimeout(collisionCheck);
 			stopPlaying();
 		}
-	}, 400);
+	}, 600);
 }
 
 function stopPlaying () {

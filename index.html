@@ -12,10 +12,12 @@
 	<!-- CSS -->
 	<link rel="stylesheet" type="text/css" href="tanks.css">
 
+	<!-- FIREBASE -->
+	<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+
 
 </head>
 <body>
-
 <div id="field">
 	<div class="tank" id="tank1"></div>
 	<div class="tank" id="tank2"></div>
@@ -27,9 +29,15 @@
 	</div>
 </div>
 
+<h2 id="high-player">Best Player: None</h2>
+<h2 id="high-score">High Score: 0</h2>
+<h2 id="current-score">Current Score: 0</h2>
+
+
 	<script type="text/javascript" src="tanks.js"></script>
 	<script type="text/javascript" src="tank2.js"></script>
 	<script type="text/javascript" src="shoot.js"></script>
+	<script type="text/javascript" src="points.js"></script>
 	<script type="text/javascript" src="explosion.js"></script>
 
 </body>

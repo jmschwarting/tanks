@@ -14,14 +14,14 @@ var playing = false;
 var playerOneScore = 0;
 var playerTwoScore = 0;
 
-$(document).keydown(function (e) {
-	if (!playing) return;
+var highestScore = 0;
 
+$(document).keydown(function (e) {
 	var key = e.which;
 
 	if ($.inArray(key, hotKeys) < 0) { return; } else {
 		e.preventDefault();
-		if (isGameOver) return;
+		if (isGameOver || !playing) return;
 		if (key === 38) {
 			goUp();
 		} else if (key === 40) {
@@ -66,7 +66,7 @@ var startGame = function () {
 	$('#tank1').removeClass('explosion');
 	$('#tank2').removeClass('explosion');
 
-	// the the machine working again
+	// get the machine working again
 	move2();
 	getShooting();
 

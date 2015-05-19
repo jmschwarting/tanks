@@ -28,7 +28,8 @@ function detectGameOver2 (shellPosition) {
 function stopPlaying () {
 	isGameOver = true;
 	playing = false;
-	playerOneScore = playerOneScore+100;
+	playerOneScore = playerOneScore + 100;
+	updateScore(playerOneScore);
 
 	$('#tank2').addClass('explosion');
 	$('#gameOver').css('display', 'block');
@@ -44,7 +45,9 @@ function stopPlaying () {
 function stopPlaying2 () {
 	isGameOver = true;
 	playing = false;
-	playerTwoScore = playerTwoScore+100;
+	playerTwoScore = playerTwoScore + 100;
+	updateScore(0);
+
 
 	$('#tank1').addClass('explosion');
 	$('#gameOverLose').css('display', 'block');
@@ -54,3 +57,21 @@ function stopPlaying2 () {
 	$(".shell").remove();
 	$(".shell2").remove();	
 };
+
+function updateScore (score) {
+	playerOneScore = score;
+	$('#current-score').html('Current Score: ' + score)
+
+	if (score > highestScore) {
+
+		setTimeout(function () {
+			var userName = prompt("You broke the record! What's your name?");
+			
+			// check if they added a user name
+			if (!userName) {
+				userName = "Anonymous"
+			}
+			updateHighScore(userName, score);
+		}, 800)
+	}
+}

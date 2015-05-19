@@ -10,9 +10,12 @@ var shellSpeed = 700;
 
 var tankDistance = 50;
 
-$(document).keydown(function (e) {
-	var key = e.which;
+var isGameOver = false;
 
+$(document).keydown(function (e) {
+	if (isGameOver) return;
+
+	var key = e.which;
 	if ($.inArray(key, hotKeys) < 0) { return; } else {
 		e.preventDefault();
 		if (key === 38) {

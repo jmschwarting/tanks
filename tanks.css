@@ -1,5 +1,6 @@
 body {
 	/*background-color: #FFD988;*/
+	font-family: 'Orbitron', sans-serif;
 	background: url("grass.png");
 }
 
@@ -54,4 +55,11 @@ body {
 
 #gameOver {
 	display: none;
+}
+
+h1 {
+	text-align: center;
+	font-size: 60px;
+	margin-top: 30vh;
+	color: #EDFF3C;
 }

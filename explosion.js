@@ -1,5 +1,4 @@
 function detectGameOver (shellPosition) {
-
 	var collisionCheck = setTimeout(function() {
 		if (tank2Position ==  shellPosition) {
 			clearTimeout(collisionCheck);
@@ -9,7 +8,12 @@ function detectGameOver (shellPosition) {
 }
 
 function stopPlaying () {
-	clearTimeout(tankMovement);
+	isGameOver = true;
+
 	$('#tank2').addClass('explosion');
+	$('#gameOver').css('display', 'block');
+
+	clearTimeout(tankMovement);
+	
 	$(".shell").remove();	
 };

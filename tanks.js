@@ -11,6 +11,9 @@ var tankDistance = 50;
 var isGameOver = false;
 var playing = false;
 
+var playerOneScore = 0;
+var playerTwoScore = 0;
+
 $(document).keydown(function (e) {
 	if (!playing) return;
 

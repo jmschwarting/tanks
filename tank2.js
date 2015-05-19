@@ -26,8 +26,6 @@ function move2 () {
 	}, nextMoveSpeed);
 }
 
-move2();
-
 function move2Up () {
 	tank2Position = tank2Position - tankDistance;
 	$("#tank2").css('top', tank2Position + 'px');

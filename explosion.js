@@ -27,6 +27,7 @@ function detectGameOver2 (shellPosition) {
 
 function stopPlaying () {
 	isGameOver = true;
+	playing = false;
 
 	$('#tank2').addClass('explosion');
 	$('#gameOver').css('display', 'block');
@@ -41,6 +42,7 @@ function stopPlaying () {
 
 function stopPlaying2 () {
 	isGameOver = true;
+	playing = false;
 
 	$('#tank1').addClass('explosion');
 	$('#gameOverLose').css('display', 'block');

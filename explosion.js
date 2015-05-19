@@ -11,4 +11,5 @@ function detectGameOver (shellPosition) {
 function stopPlaying () {
 	clearTimeout(tankMovement);
 	$('#tank2').addClass('explosion');
-}
+	$(".shell").remove();	
+};

@@ -47,3 +47,8 @@ body {
 	background-size: cover;
 	right: 650px;
 }
+
+
+#gameOver {
+	display: none;
+}

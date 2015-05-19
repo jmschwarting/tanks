@@ -19,30 +19,37 @@
 </head>
 <body>
 
+<audio loop="loop" autoplay="autoplay">  
+   <source src="music.mp3" />  
+</audio>
+
 <div class="wrapper">
 	<div class="box-wrapper">
 		<div class="info-box">
+			<h2>SCORE: <span id="current-score">0</span></h2>
 			<h4><b>Best Player:</b> <span id="high-player">Obama<span></h4>
 			<h4>Highest Score: <span id="high-score">0<span></h4>
-			<h4>Current Score: <span id="current-score">0</span></h4>
 		</div>
 
 		<div class="info-box" style="margin-top: 20px;">
-			<h4>"Enter" play</h4>
-			<h4>"Space" shoot</h4>
-			<h4>"Up" move up</h4>
-			<h4>"Down" move down</h4>
+			<h2>CONTROLS</h2>
+			<h4>"Enter" to play</h4>
+			<h4>"Space Bar" to shoot</h4>
+			<h4>"Up" moves up</h4>
+			<h4>"Down" moves down</h4>
 		</div>
 	</div>
 
 	<div id="field">
 		<div class="tank" id="tank1"></div>
 		<div class="tank" id="tank2"></div>
-		<div id="gameOver">
+		<div class="gameEnd" id="gameOver">
 			<h1>YOU WIN</h1>
+			<h4>Press ENTER for next battle</h4>
 		</div>
-		<div id="gameOverLose">
+		<div class="gameEnd" id="gameOverLose">
 			<h1>YOU LOSE</h1>
+			<h4>Press ENTER for new battle</h4>
 		</div>
 	</div>
 </div>

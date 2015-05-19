@@ -80,6 +80,10 @@ b {
 }
 
 
+.gameEnd h4 {
+	text-align: center;
+	color: white;
+}
 
 #gameOver {
 	display: none;

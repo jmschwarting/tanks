@@ -1,7 +1,6 @@
 var shellCount = 0;
 var shooting = true;
 var shootDelay = 500;
-var autoShootingSpeed = 500;
 
 var fireAudio = new Audio('fire.wav');
 var fireAudio2 = new Audio('fire2.wav');

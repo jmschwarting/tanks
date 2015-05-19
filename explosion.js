@@ -43,6 +43,7 @@ function stopPlaying () {
 	isGameOver = true;
 	playing = false;
 	playerOneScore = playerOneScore + 100;
+	autoShootingSpeed = autoShootingSpeed - 20;
 	updateScore(playerOneScore);
 
 	$('#tank2').addClass('explosion');
@@ -60,6 +61,7 @@ function stopPlaying2 () {
 	isGameOver = true;
 	playing = false;
 	playerTwoScore = playerTwoScore + 100;
+	autoShootingSpeed = 500;
 	updateScore(0);
 
 
@@ -88,6 +90,6 @@ function updateScore (score) {
 				userName = "Obomba"
 			}
 			updateHighScore(userName, score);
-		}, 800)
+		}, 200)
 	}
 }

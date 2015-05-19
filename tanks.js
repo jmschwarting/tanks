@@ -6,6 +6,8 @@ var tankPosition = 0;
 var tank1Position = tankPosition;
 var tank2Position = tankPosition;
 
+var autoShootingSpeed = 500;
+
 var shellSpeed = 700;
 var tankDistance = 50;
 var isGameOver = false;

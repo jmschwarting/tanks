@@ -35,6 +35,10 @@ b {
 	background: url("images/dirt.png");
 	position: relative;
 	overflow: hidden;
+	border: 20px solid transparent;
+	border-image-source: url(images/barrier.png);
+	border-image-repeat: round;
+	border-image-slice: 100;
 }
 
 .explosion {
